@@ -1,8 +1,8 @@
 body {
-  background-color: #f8f1f1;
-  color: rgba(100, 100, 100, 0,1);
+  background-image: url("images/Shell_background.jpg");
+  color: rgba(100, 100, 100, 0.9);
   font-size: 16px;
-  line-height 1.5;
+  line-height 1.1;
   font-family:'Varela Round', sans-serif;
 }
 
@@ -14,31 +14,53 @@ h1, h2, h3 {
 }
 
 a {
-  color:#db6400 ;
-  background-color: #f8f1f1 ;
+  color:#4c6ef5 ;
+  background-color: #rgba(248,241,241,0.9) ;
   text-decoration: none;
 }
 
 a:hover {
   color: #f8f1f1;
-  background-color: #ffa62b;
+  background-color: #4c6ef5;
   text-decoration: none;
 }
 
 .container {
   width: 800px;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding : 10px;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
 }
 
 .card {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px;
+  box-shadow: rgb(50, 50, 93) 0px 2px 5px -1px;
   margin: 32px auto;
-  background-color: #f8f1f1;
+  background-color: rgba(248,241,241,0.95);
   padding: 30px;
+  border-radius: 4px;
 }
 
 .img-circle {
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .text-center {
@@ -63,18 +85,20 @@ a:hover {
   margin-top: 8px;
   vertical-align: middle;
   width: 200px;
-  height:auto;
-
+  height: auto;
 }
 
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
+.picto {font-size: 32px;}
+
+.title {
+  display:flex;
+  font-size: 32px;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.list-inline > li {
-  display: inline-block;
-  padding: 0px 20px;
+#flip-horizontally {
+  transform: scaleX(-1);
 }
